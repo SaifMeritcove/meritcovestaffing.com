@@ -1,816 +1,1242 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>MeritCove Staffing | Professional & Specialized Talent Solutions</title>
+<title>MeritCove Staffing | Permanent Placement & Specialized Search</title>
 
-  <meta name="description" content="MeritCove Staffing connects organizations with specialized professionals across Healthcare, Finance & Accounting, Construction, Engineering and Professional Services.">
+<meta name="description" content="MeritCove Staffing connects U.S. organizations with specialized professionals across Healthcare, Finance & Accounting, Construction, Engineering and Professional Services.">
 
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+<style>
 
-    :root {
-      --black: #080b10;
-      --navy: #0d121a;
-      --navy-light: #141b25;
-      --gold: #c9a45c;
-      --gold-light: #e0c27d;
-      --white: #f7f7f5;
-      --grey: #a8adb5;
-      --border: rgba(201,164,92,.22);
-    }
-
-    html {
-      scroll-behavior: smooth;
-    }
-
-    body {
-      font-family: Arial, Helvetica, sans-serif;
-      background: var(--black);
-      color: var(--white);
-      line-height: 1.6;
-    }
-
-    a {
-      text-decoration: none;
-      color: inherit;
-    }
-
-    .container {
-      width: min(1160px, 90%);
-      margin: auto;
-    }
-
-    /* NAVIGATION */
-
-    header {
-      position: sticky;
-      top: 0;
-      z-index: 100;
-      background: rgba(8,11,16,.94);
-      border-bottom: 1px solid var(--border);
-      backdrop-filter: blur(12px);
-    }
-
-    nav {
-      min-height: 82px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 30px;
-    }
-
-    .brand {
-      display: flex;
-      align-items: center;
-      gap: 14px;
-    }
-
-    .brand-mark {
-  width: 58px;
-  height: 58px;
-  display: grid;
-  place-items: center;
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
 }
 
-.brand-mark img {
-  width: 58px;
-  height: 58px;
-  object-fit: contain;
-  display: block;
+:root{
+--black:#070a0f;
+--dark:#0b1017;
+--card:#111821;
+--gold:#c9a45c;
+--gold-light:#e5c77e;
+--white:#f6f6f3;
+--grey:#a9afb8;
+--border:rgba(201,164,92,.22);
 }
-    .brand-name strong {
-      display: block;
-      font-size: 18px;
-      letter-spacing: 3px;
-    }
-
-    .brand-name span {
-      display: block;
-      color: var(--gold);
-      font-size: 10px;
-      letter-spacing: 5px;
-      margin-top: 2px;
-    }
-
-    .nav-links {
-      display: flex;
-      align-items: center;
-      gap: 28px;
-      color: #d9dce1;
-      font-size: 14px;
-    }
-
-    .nav-links a:hover {
-      color: var(--gold-light);
-    }
-
-    .nav-button {
-      border: none;
-      padding: 10px 18px;
-      color: var(--gold-light) !important;
-    }
-
-    /* HERO */
-
-    .hero {
-      min-height: 720px;
-      display: flex;
-      align-items: center;
-      position: relative;
-      overflow: hidden;
-      background:
-        radial-gradient(circle at 80% 30%, rgba(201,164,92,.11), transparent 30%),
-        radial-gradient(circle at 20% 80%, rgba(255,255,255,.04), transparent 30%),
-        linear-gradient(135deg, #080b10 0%, #0d121a 60%, #111821 100%);
-    }
-
-    .hero::after {
-      content: "";
-      position: absolute;
-      width: 500px;
-      height: 500px;
-      border: 1px solid rgba(201,164,92,.10);
-      border-radius: 50%;
-      right: -180px;
-      top: 100px;
-    }
-
-    .hero-content {
-      position: relative;
-      z-index: 2;
-      max-width: 850px;
-      padding: 100px 0;
-    }
-
-    .eyebrow {
-      color: var(--gold);
-      letter-spacing: 4px;
-      font-size: 12px;
-      text-transform: uppercase;
-      margin-bottom: 25px;
-    }
-
-    h1 {
-      font-size: clamp(48px, 7vw, 82px);
-      line-height: 1.04;
-      font-weight: 500;
-      letter-spacing: -2px;
-      margin-bottom: 30px;
-    }
-
-    h1 span {
-      color: var(--gold-light);
-    }
-
-    .hero p {
-      color: #c3c7ce;
-      font-size: 19px;
-      max-width: 720px;
-      margin-bottom: 40px;
-    }
-
-    .buttons {
-      display: flex;
-      gap: 15px;
-      flex-wrap: wrap;
-    }
-
-    .btn {
-      display: inline-block;
-      padding: 15px 25px;
-      font-size: 13px;
-      letter-spacing: 1.5px;
-      text-transform: uppercase;
-      transition: .25s;
-    }
-
-    .btn-gold {
-      background: var(--gold);
-      color: #080b10;
-      border: 1px solid var(--gold);
-    }
-
-    .btn-gold:hover {
-      background: var(--gold-light);
-    }
-
-    .btn-outline {
-      border: 1px solid #545a63;
-      color: var(--white);
-    }
-
-    .btn-outline:hover {
-      border-color: var(--gold);
-      color: var(--gold-light);
-    }
-
-    /* SECTIONS */
-
-    section {
-      padding: 105px 0;
-    }
-
-    .section-label {
-      color: var(--gold);
-      text-transform: uppercase;
-      letter-spacing: 4px;
-      font-size: 11px;
-      margin-bottom: 15px;
-    }
-
-    h2 {
-      font-size: clamp(35px, 4vw, 52px);
-      font-weight: 500;
-      line-height: 1.15;
-      margin-bottom: 22px;
-    }
-
-    .intro {
-      color: var(--grey);
-      max-width: 700px;
-      font-size: 17px;
-    }
-
-    /* INDUSTRIES */
-
-    .industries {
-      background: var(--navy);
-    }
-
-    .industry-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 1px;
-      background: var(--border);
-      margin-top: 55px;
-      border: 1px solid var(--border);
-    }
-
-    .industry {
-      background: var(--navy);
-      padding: 42px 34px;
-      min-height: 220px;
-      transition: .25s;
-    }
-
-    .industry:hover {
-      background: var(--navy-light);
-    }
-
-    .number {
-      color: var(--gold);
-      font-size: 12px;
-      letter-spacing: 2px;
-      margin-bottom: 35px;
-    }
-
-    .industry h3 {
-      font-size: 22px;
-      font-weight: 500;
-      margin-bottom: 12px;
-    }
-
-    .industry p {
-      color: var(--grey);
-      font-size: 14px;
-    }
-
-    /* TWO COLUMN */
-
-    .two-column {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 80px;
-      align-items: center;
-    }
-
-    .feature-box {
-      border: 1px solid var(--border);
-      padding: 50px;
-      background: linear-gradient(145deg,#111821,#0b1017);
-    }
-
-    .feature-box h3 {
-      color: var(--gold-light);
-      font-size: 27px;
-      margin-bottom: 20px;
-      font-weight: 500;
-    }
-
-    .feature-box p {
-      color: var(--grey);
-      margin-bottom: 25px;
-    }
-
-    /* WHY US */
-
-    .why {
-      background: #f2f1ed;
-      color: #11151b;
-    }
-
-    .why .section-label {
-      color: #8b6b32;
-    }
-
-    .why .intro {
-      color: #5e6269;
-    }
-
-    .why-grid {
-      margin-top: 55px;
-      display: grid;
-      grid-template-columns: repeat(3,1fr);
-      gap: 45px;
-    }
-
-    .why-item {
-      border-top: 2px solid #b69250;
-      padding-top: 25px;
-    }
-
-    .why-item h3 {
-      font-size: 21px;
-      margin-bottom: 12px;
-    }
-
-    .why-item p {
-      color: #666b72;
-      font-size: 14px;
-    }
-
-    /* CTA */
-
-    .cta {
-      text-align: center;
-      background:
-        radial-gradient(circle at center, rgba(201,164,92,.13), transparent 40%),
-        #090d13;
-    }
-
-    .cta h2 {
-      max-width: 750px;
-      margin: 0 auto 20px;
-    }
-
-    .cta p {
-      color: var(--grey);
-      max-width: 650px;
-      margin: 0 auto 35px;
-    }
-
-    /* FOOTER */
-
-    footer {
-      border-top: 1px solid var(--border);
-      padding: 50px 0 30px;
-      background: #070a0e;
-    }
-
-    .footer-grid {
-      display: flex;
-      justify-content: space-between;
-      gap: 40px;
-      flex-wrap: wrap;
-    }
-
-    .footer-brand {
-      max-width: 420px;
-    }
-
-    .footer-brand h3 {
-      letter-spacing: 3px;
-      margin-bottom: 12px;
-    }
-
-    .footer-brand p {
-      color: var(--grey);
-      font-size: 14px;
-    }
-
-    .footer-links {
-      display: flex;
-      gap: 50px;
-      flex-wrap: wrap;
-    }
-
-    .footer-links h4 {
-      color: var(--gold);
-      font-size: 12px;
-      text-transform: uppercase;
-      letter-spacing: 2px;
-      margin-bottom: 12px;
-    }
-
-    .footer-links a {
-      display: block;
-      color: var(--grey);
-      font-size: 13px;
-      margin-bottom: 7px;
-    }
-
-    .copyright {
-      color: #656a72;
-      border-top: 1px solid #1d2229;
-      margin-top: 40px;
-      padding-top: 25px;
-      font-size: 12px;
-    }
-
-    /* MOBILE */
-
-    @media(max-width: 850px) {
-      .nav-links {
-        display: none;
-      }
-
-      .hero {
-        min-height: auto;
-      }
-
-      .hero-content {
-        padding: 90px 0;
-      }
-
-      .industry-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .two-column {
-        grid-template-columns: 1fr;
-        gap: 40px;
-      }
-
-      .why-grid {
-        grid-template-columns: 1fr;
-      }
-
-      section {
-        padding: 75px 0;
-      }
-
-      .feature-box {
-        padding: 35px 25px;
-      }
-    }
-  </style>
+
+html{
+scroll-behavior:smooth;
+}
+
+body{
+font-family:Arial,Helvetica,sans-serif;
+background:var(--black);
+color:var(--white);
+line-height:1.6;
+}
+
+a{
+color:inherit;
+text-decoration:none;
+}
+
+.container{
+width:min(1180px,90%);
+margin:auto;
+}
+
+/* HEADER */
+
+header{
+position:sticky;
+top:0;
+z-index:1000;
+background:rgba(7,10,15,.96);
+border-bottom:1px solid var(--border);
+backdrop-filter:blur(12px);
+}
+
+nav{
+height:88px;
+display:flex;
+align-items:center;
+justify-content:space-between;
+gap:30px;
+}
+
+.brand{
+display:flex;
+align-items:center;
+gap:14px;
+}
+
+.brand-mark{
+width:60px;
+height:60px;
+display:grid;
+place-items:center;
+}
+
+.brand-mark img{
+width:60px;
+height:60px;
+object-fit:contain;
+display:block;
+}
+
+.brand-name strong{
+display:block;
+font-size:19px;
+letter-spacing:4px;
+}
+
+.brand-name span{
+display:block;
+color:var(--gold);
+font-size:10px;
+letter-spacing:6px;
+margin-top:2px;
+}
+
+.nav-links{
+display:flex;
+align-items:center;
+gap:30px;
+font-size:14px;
+color:#d9dce1;
+}
+
+.nav-links a{
+transition:.2s;
+}
+
+.nav-links a:hover{
+color:var(--gold-light);
+}
+
+.nav-contact{
+border:1px solid var(--gold);
+padding:11px 19px;
+color:var(--gold-light)!important;
+}
+
+.mobile-menu{
+display:none;
+color:var(--gold-light);
+font-size:27px;
+cursor:pointer;
+}
+
+/* HERO */
+
+.hero{
+position:relative;
+overflow:hidden;
+background:
+radial-gradient(circle at 85% 40%,rgba(201,164,92,.10),transparent 27%),
+linear-gradient(135deg,#080c12,#101720);
+}
+
+.hero:after{
+content:"";
+position:absolute;
+width:520px;
+height:520px;
+border:1px solid rgba(201,164,92,.11);
+border-radius:50%;
+right:-170px;
+top:70px;
+}
+
+.hero-content{
+position:relative;
+z-index:2;
+max-width:900px;
+padding:125px 0 130px;
+}
+
+.eyebrow{
+color:var(--gold);
+font-size:11px;
+letter-spacing:4px;
+text-transform:uppercase;
+margin-bottom:24px;
+}
+
+h1{
+font-size:clamp(50px,6.5vw,82px);
+font-weight:500;
+letter-spacing:-2.5px;
+line-height:1.03;
+max-width:950px;
+margin-bottom:28px;
+}
+
+h1 span{
+color:var(--gold-light);
+}
+
+.hero-description{
+max-width:730px;
+font-size:18px;
+color:#bdc2ca;
+margin-bottom:38px;
+}
+
+.buttons{
+display:flex;
+gap:14px;
+flex-wrap:wrap;
+}
+
+.btn{
+display:inline-block;
+padding:15px 25px;
+font-size:12px;
+letter-spacing:1.7px;
+text-transform:uppercase;
+transition:.25s;
+}
+
+.btn-primary{
+background:var(--gold);
+border:1px solid var(--gold);
+color:#080b10;
+}
+
+.btn-primary:hover{
+background:var(--gold-light);
+}
+
+.btn-secondary{
+border:1px solid #535b66;
+}
+
+.btn-secondary:hover{
+border-color:var(--gold);
+color:var(--gold-light);
+}
+
+/* EXPERTISE STRIP */
+
+.expertise-strip{
+border-top:1px solid var(--border);
+border-bottom:1px solid var(--border);
+background:#090d13;
+}
+
+.expertise-items{
+min-height:84px;
+display:flex;
+align-items:center;
+justify-content:space-between;
+gap:20px;
+flex-wrap:wrap;
+color:#b8bdc5;
+font-size:12px;
+letter-spacing:1.5px;
+text-transform:uppercase;
+}
+
+.expertise-items span:before{
+content:"◆";
+color:var(--gold);
+font-size:7px;
+margin-right:12px;
+}
+
+/* GENERAL */
+
+section{
+padding:105px 0;
+}
+
+.section-label{
+color:var(--gold);
+font-size:11px;
+letter-spacing:4px;
+text-transform:uppercase;
+margin-bottom:17px;
+}
+
+h2{
+font-size:clamp(36px,4.5vw,56px);
+font-weight:500;
+line-height:1.12;
+letter-spacing:-1.5px;
+margin-bottom:22px;
+}
+
+.section-intro{
+color:var(--grey);
+font-size:17px;
+max-width:720px;
+}
+
+/* INDUSTRIES */
+
+.industries{
+background:#0c1118;
+}
+
+.industry-grid{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:1px;
+background:var(--border);
+border:1px solid var(--border);
+margin-top:55px;
+}
+
+.industry{
+background:#0c1118;
+padding:38px 32px;
+min-height:245px;
+transition:.25s;
+}
+
+.industry:hover{
+background:#131b25;
+}
+
+.industry-number{
+color:var(--gold);
+font-size:11px;
+letter-spacing:2px;
+margin-bottom:34px;
+}
+
+.industry h3{
+font-size:22px;
+font-weight:500;
+margin-bottom:12px;
+}
+
+.industry p{
+color:var(--grey);
+font-size:14px;
+}
+
+/* EMPLOYERS */
+
+.two-column{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:80px;
+align-items:start;
+}
+
+.service-list{
+border:1px solid var(--border);
+background:linear-gradient(145deg,#111821,#0b1017);
+}
+
+.service{
+padding:31px 35px;
+border-bottom:1px solid var(--border);
+}
+
+.service:last-child{
+border-bottom:none;
+}
+
+.service-number{
+color:var(--gold);
+font-size:10px;
+letter-spacing:2px;
+margin-bottom:8px;
+}
+
+.service h3{
+font-size:21px;
+font-weight:500;
+margin-bottom:8px;
+}
+
+.service p{
+font-size:14px;
+color:var(--grey);
+}
+
+/* PROCESS */
+
+.process{
+background:#f1f0ec;
+color:#11151b;
+}
+
+.process .section-label{
+color:#8c6a2d;
+}
+
+.process .section-intro{
+color:#61666e;
+}
+
+.process-grid{
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:35px;
+margin-top:55px;
+}
+
+.process-item{
+border-top:2px solid #b48b43;
+padding-top:22px;
+}
+
+.process-number{
+font-size:12px;
+color:#927039;
+margin-bottom:18px;
+}
+
+.process-item h3{
+font-size:20px;
+margin-bottom:10px;
+}
+
+.process-item p{
+font-size:14px;
+color:#686d74;
+}
+
+/* CANDIDATES */
+
+.candidate-content{
+max-width:760px;
+}
+
+.candidate-points{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:25px;
+margin-top:50px;
+}
+
+.candidate-point{
+border:1px solid var(--border);
+padding:28px;
+}
+
+.candidate-point h3{
+font-size:18px;
+font-weight:500;
+color:var(--gold-light);
+margin-bottom:8px;
+}
+
+.candidate-point p{
+color:var(--grey);
+font-size:14px;
+}
+
+/* WHY */
+
+.why{
+background:#0c1118;
+}
+
+.why-grid{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:25px;
+margin-top:50px;
+}
+
+.why-card{
+padding:34px;
+border-top:1px solid var(--gold);
+background:#101720;
+}
+
+.why-card h3{
+font-size:20px;
+font-weight:500;
+margin-bottom:12px;
+}
+
+.why-card p{
+color:var(--grey);
+font-size:14px;
+}
+
+/* ABOUT */
+
+.about-copy p{
+color:var(--grey);
+font-size:16px;
+margin-bottom:18px;
+}
+
+/* CONTACT */
+
+.contact{
+text-align:center;
+background:
+radial-gradient(circle at center,rgba(201,164,92,.13),transparent 40%),
+#090d13;
+}
+
+.contact h2{
+max-width:760px;
+margin:0 auto 20px;
+}
+
+.contact p{
+max-width:650px;
+margin:0 auto 35px;
+color:var(--grey);
+}
+
+.contact-email{
+display:block;
+margin-top:22px;
+color:var(--gold-light);
+font-size:14px;
+}
+
+/* FOOTER */
+
+footer{
+background:#06090d;
+border-top:1px solid var(--border);
+padding:60px 0 28px;
+}
+
+.footer-grid{
+display:grid;
+grid-template-columns:2fr 1fr 1fr;
+gap:70px;
+}
+
+.footer-logo{
+display:flex;
+align-items:center;
+gap:13px;
+margin-bottom:18px;
+}
+
+.footer-logo img{
+width:55px;
+height:55px;
+object-fit:contain;
+}
+
+.footer-brand strong{
+letter-spacing:3px;
+font-size:17px;
+}
+
+.footer-brand p{
+color:var(--grey);
+font-size:13px;
+max-width:400px;
+margin-top:12px;
+}
+
+.footer-column h4{
+color:var(--gold);
+font-size:11px;
+letter-spacing:2px;
+text-transform:uppercase;
+margin-bottom:17px;
+}
+
+.footer-column a{
+display:block;
+color:var(--grey);
+font-size:13px;
+margin-bottom:9px;
+}
+
+.footer-column a:hover{
+color:var(--gold-light);
+}
+
+.footer-bottom{
+border-top:1px solid #1c222a;
+margin-top:45px;
+padding-top:24px;
+display:flex;
+justify-content:space-between;
+gap:20px;
+color:#686e77;
+font-size:11px;
+}
+
+/* MOBILE */
+
+@media(max-width:900px){
+
+.nav-links{
+display:none;
+}
+
+.mobile-menu{
+display:block;
+}
+
+.hero-content{
+padding:95px 0;
+}
+
+.hero:after{
+display:none;
+}
+
+.expertise-items{
+justify-content:flex-start;
+padding:25px 0;
+}
+
+.industry-grid{
+grid-template-columns:1fr 1fr;
+}
+
+.two-column{
+grid-template-columns:1fr;
+gap:50px;
+}
+
+.process-grid{
+grid-template-columns:1fr 1fr;
+}
+
+.candidate-points,
+.why-grid{
+grid-template-columns:1fr;
+}
+
+.footer-grid{
+grid-template-columns:1fr 1fr;
+}
+
+}
+
+@media(max-width:600px){
+
+nav{
+height:78px;
+}
+
+.brand-mark,
+.brand-mark img{
+width:50px;
+height:50px;
+}
+
+.brand-name strong{
+font-size:15px;
+letter-spacing:3px;
+}
+
+.brand-name span{
+font-size:8px;
+letter-spacing:4px;
+}
+
+.hero-content{
+padding:80px 0;
+}
+
+h1{
+font-size:46px;
+letter-spacing:-1.5px;
+}
+
+section{
+padding:75px 0;
+}
+
+.industry-grid,
+.process-grid{
+grid-template-columns:1fr;
+}
+
+.footer-grid{
+grid-template-columns:1fr;
+gap:35px;
+}
+
+.footer-bottom{
+flex-direction:column;
+}
+
+}
+
+</style>
 </head>
 
 <body>
 
 <header>
-  <div class="container">
-    <nav>
+<div class="container">
+<nav>
 
-      <a href="#" class="brand">
-        <div class="brand-mark">
-  <img src="Website%20Logo.png" alt="MeritCove Staffing logo">
+<a href="#" class="brand">
+
+<div class="brand-mark">
+<img src="Website%20Logo.png" alt="MeritCove Staffing logo">
 </div>
 
-        <div class="brand-name">
-          <strong>MERITCOVE</strong>
-          <span>STAFFING</span>
-        </div>
-      </a>
+<div class="brand-name">
+<strong>MERITCOVE</strong>
+<span>STAFFING</span>
+</div>
 
-      <div class="nav-links">
-        <a href="#industries">Industries</a>
-        <a href="#employers">Employers</a>
-        <a href="#candidates">Job Seekers</a>
-        <a href="#about">About</a>
-        <a href="#contact" class="nav-button">Contact Us</a>
-      </div>
+</a>
 
-    </nav>
-  </div>
+<div class="nav-links">
+<a href="#industries">Industries</a>
+<a href="#employers">Employers</a>
+<a href="#professionals">Job Seekers</a>
+<a href="#about">About</a>
+<a href="#contact" class="nav-contact">Contact Us</a>
+</div>
+
+<div class="mobile-menu">☰</div>
+
+</nav>
+</div>
 </header>
 
 
 <main>
 
+<!-- HERO -->
+
 <section class="hero">
 
-  <div class="container">
-    <div class="hero-content">
+<div class="container">
 
-      <div class="eyebrow">
-        Professional & Specialized Talent Solutions
-      </div>
+<div class="hero-content">
 
-      <h1>
-        Connecting exceptional talent with
-        <span>exceptional organizations.</span>
-      </h1>
+<div class="eyebrow">
+Permanent Placement • Specialized Search
+</div>
 
-      <p>
-        MeritCove Staffing connects organizations with skilled professionals
-        across specialized industries, delivering a focused and responsive
-        approach to permanent talent acquisition.
-      </p>
+<h1>
+The right talent can
+<span>change everything.</span>
+</h1>
 
-      <div class="buttons">
-        <a href="#contact" class="btn btn-gold">Find Talent</a>
-        <a href="#candidates" class="btn btn-outline">Explore Opportunities</a>
-      </div>
+<p class="hero-description">
+MeritCove Staffing connects U.S. organizations with specialized
+professionals across Healthcare, Finance & Accounting, Construction,
+Engineering and Professional Services.
+</p>
 
-    </div>
-  </div>
+<div class="buttons">
+
+<a href="#contact" class="btn btn-primary">
+Find Talent
+</a>
+
+<a href="#professionals" class="btn btn-secondary">
+Explore Opportunities
+</a>
+
+</div>
+
+</div>
+
+</div>
 
 </section>
 
+
+<!-- EXPERTISE -->
+
+<div class="expertise-strip">
+
+<div class="container expertise-items">
+
+<span>Healthcare</span>
+<span>Finance & Accounting</span>
+<span>Construction</span>
+<span>Engineering</span>
+<span>Professional Services</span>
+
+</div>
+
+</div>
+
+
+<!-- INDUSTRIES -->
 
 <section id="industries" class="industries">
 
-  <div class="container">
+<div class="container">
 
-    <div class="section-label">Our Expertise</div>
+<div class="section-label">Industry Expertise</div>
 
-    <h2>Specialized talent.<br>Focused industries.</h2>
+<h2>
+Focused recruiting for specialized talent.
+</h2>
 
-    <p class="intro">
-      We focus on professional disciplines where understanding the role,
-      organization and candidate matters.
-    </p>
+<p class="section-intro">
+Our recruiting approach is built around understanding the position,
+the organization and the professional behind every resume.
+</p>
 
-    <div class="industry-grid">
 
-      <div class="industry">
-        <div class="number">01</div>
-        <h3>Healthcare</h3>
-        <p>
-          Connecting healthcare organizations with clinical and specialized
-          professionals across a range of disciplines.
-        </p>
-      </div>
+<div class="industry-grid">
 
-      <div class="industry">
-        <div class="number">02</div>
-        <h3>Finance & Accounting</h3>
-        <p>
-          Supporting organizations seeking accounting, finance, tax,
-          analytical and financial leadership talent.
-        </p>
-      </div>
+<div class="industry">
+<div class="industry-number">01</div>
+<h3>Healthcare</h3>
+<p>
+Supporting healthcare organizations seeking clinical and specialized
+professionals across a range of disciplines.
+</p>
+</div>
 
-      <div class="industry">
-        <div class="number">03</div>
-        <h3>Construction</h3>
-        <p>
-          Recruiting project management, estimating, field leadership,
-          safety and specialized construction professionals.
-        </p>
-      </div>
+<div class="industry">
+<div class="industry-number">02</div>
+<h3>Finance & Accounting</h3>
+<p>
+Recruiting professionals across accounting, tax, finance, analysis,
+payroll and financial leadership functions.
+</p>
+</div>
 
-      <div class="industry">
-        <div class="number">04</div>
-        <h3>Engineering</h3>
-        <p>
-          Connecting organizations with skilled engineering professionals
-          across technical and project-focused disciplines.
-        </p>
-      </div>
+<div class="industry">
+<div class="industry-number">03</div>
+<h3>Construction</h3>
+<p>
+Connecting organizations with project managers, estimators,
+superintendents, safety professionals and construction specialists.
+</p>
+</div>
 
-      <div class="industry">
-        <div class="number">05</div>
-        <h3>Professional Services</h3>
-        <p>
-          Talent solutions spanning operations, human resources,
-          administration, sales and other professional functions.
-        </p>
-      </div>
+<div class="industry">
+<div class="industry-number">04</div>
+<h3>Engineering</h3>
+<p>
+Supporting searches for skilled engineering professionals across
+technical, design and project-focused disciplines.
+</p>
+</div>
 
-      <div class="industry">
-        <div class="number">06</div>
-        <h3>Specialized Search</h3>
-        <p>
-          Focused recruiting support for specialized positions requiring
-          targeted sourcing and candidate engagement.
-        </p>
-      </div>
+<div class="industry">
+<div class="industry-number">05</div>
+<h3>Professional Services</h3>
+<p>
+Recruiting across operations, human resources, administration,
+business development, sales and other professional functions.
+</p>
+</div>
 
-    </div>
+<div class="industry">
+<div class="industry-number">06</div>
+<h3>Specialized Search</h3>
+<p>
+Focused sourcing and candidate engagement for positions requiring
+a targeted recruiting approach.
+</p>
+</div>
 
-  </div>
+</div>
+
+</div>
+
 </section>
 
+
+<!-- EMPLOYERS -->
 
 <section id="employers">
 
-  <div class="container">
+<div class="container">
 
-    <div class="two-column">
+<div class="two-column">
 
-      <div>
+<div>
 
-        <div class="section-label">For Employers</div>
+<div class="section-label">For Employers</div>
 
-        <h2>The people behind your next chapter.</h2>
+<h2>
+Recruiting built around your hiring needs.
+</h2>
 
-        <p class="intro">
-          Hiring specialized professionals takes more than matching a resume
-          with a job description. MeritCove takes a focused approach to
-          understanding your requirements and identifying professionals who
-          align with the opportunity.
-        </p>
+<p class="section-intro">
+Finding the right professional requires more than searching a database.
+MeritCove takes a focused approach to understanding your position,
+organization and hiring priorities before beginning the search.
+</p>
 
-        <br><br>
+<br><br>
 
-        <a href="#contact" class="btn btn-gold">
-          Start Your Search
-        </a>
+<a href="#contact" class="btn btn-primary">
+Start Your Search
+</a>
 
-      </div>
+</div>
 
-      <div class="feature-box">
 
-        <h3>Permanent Placement</h3>
+<div class="service-list">
 
-        <p>
-          Targeted direct-hire recruiting designed to help organizations
-          identify qualified professionals for critical positions.
-        </p>
+<div class="service">
+<div class="service-number">01</div>
+<h3>Permanent Placement</h3>
+<p>
+Direct-hire recruiting for organizations seeking professionals
+for long-term positions.
+</p>
+</div>
 
-        <h3>Specialized Search</h3>
+<div class="service">
+<div class="service-number">02</div>
+<h3>Specialized Search</h3>
+<p>
+Targeted sourcing for specialized and hard-to-fill professional
+positions.
+</p>
+</div>
 
-        <p>
-          Focused candidate sourcing for hard-to-fill and specialized
-          professional roles.
-        </p>
+<div class="service">
+<div class="service-number">03</div>
+<h3>Candidate Engagement</h3>
+<p>
+Professional outreach, screening and communication designed to
+create meaningful candidate conversations.
+</p>
+</div>
 
-        <h3>Candidate Engagement</h3>
+</div>
 
-        <p>
-          A responsive recruitment process built around communication,
-          alignment and candidate experience.
-        </p>
+</div>
 
-      </div>
+</div>
 
-    </div>
-
-  </div>
 </section>
 
 
-<section id="candidates" class="why">
+<!-- PROCESS -->
 
-  <div class="container">
+<section class="process">
 
-    <div class="section-label">For Professionals</div>
+<div class="container">
 
-    <h2>Your experience deserves the right opportunity.</h2>
+<div class="section-label">Our Approach</div>
 
-    <p class="intro">
-      We work to connect skilled professionals with organizations where their
-      experience, ambitions and capabilities can make an impact.
-    </p>
+<h2>
+A focused search from conversation to hire.
+</h2>
 
-    <div class="why-grid">
+<p class="section-intro">
+Every search begins by understanding what success looks like for
+the organization and the professional.
+</p>
 
-      <div class="why-item">
-        <h3>Relevant Opportunities</h3>
-        <p>
-          We focus on matching professionals with opportunities aligned with
-          their background and career direction.
-        </p>
-      </div>
 
-      <div class="why-item">
-        <h3>Clear Communication</h3>
-        <p>
-          Candidates deserve transparency and communication throughout the
-          recruitment process.
-        </p>
-      </div>
+<div class="process-grid">
 
-      <div class="why-item">
-        <h3>Professional Partnership</h3>
-        <p>
-          Our goal is to create meaningful introductions between talented
-          professionals and growing organizations.
-        </p>
-      </div>
+<div class="process-item">
+<div class="process-number">01</div>
+<h3>Understand</h3>
+<p>
+We learn about the role, team, requirements and hiring priorities.
+</p>
+</div>
 
-    </div>
+<div class="process-item">
+<div class="process-number">02</div>
+<h3>Search</h3>
+<p>
+We identify and engage professionals whose experience aligns with
+the opportunity.
+</p>
+</div>
 
-  </div>
+<div class="process-item">
+<div class="process-number">03</div>
+<h3>Connect</h3>
+<p>
+Qualified candidates are introduced with clear communication
+throughout the hiring process.
+</p>
+</div>
+
+<div class="process-item">
+<div class="process-number">04</div>
+<h3>Hire</h3>
+<p>
+We support the process through interviews, selection and the
+successful placement.
+</p>
+</div>
+
+</div>
+
+</div>
+
 </section>
 
+
+<!-- PROFESSIONALS -->
+
+<section id="professionals">
+
+<div class="container">
+
+<div class="candidate-content">
+
+<div class="section-label">For Professionals</div>
+
+<h2>
+Your experience deserves the right opportunity.
+</h2>
+
+<p class="section-intro">
+A career move is more than a job description. MeritCove works to
+connect skilled professionals with opportunities where their
+experience and career goals can make an impact.
+</p>
+
+</div>
+
+
+<div class="candidate-points">
+
+<div class="candidate-point">
+<h3>Relevant Opportunities</h3>
+<p>
+Conversations centered around positions aligned with your experience
+and professional direction.
+</p>
+</div>
+
+<div class="candidate-point">
+<h3>Clear Communication</h3>
+<p>
+Transparent communication throughout the recruiting and interview
+process.
+</p>
+</div>
+
+<div class="candidate-point">
+<h3>Professional Partnership</h3>
+<p>
+A recruiting experience focused on meaningful introductions rather
+than simply forwarding resumes.
+</p>
+</div>
+
+</div>
+
+<br><br>
+
+<a
+href="mailto:saif@meritcovestaffing.com?subject=Career%20Opportunity%20-%20MeritCove%20Staffing"
+class="btn btn-secondary">
+Connect With MeritCove
+</a>
+
+</div>
+
+</section>
+
+
+<!-- WHY MERITCOVE -->
+
+<section class="why">
+
+<div class="container">
+
+<div class="section-label">Why MeritCove</div>
+
+<h2>
+Focused. Responsive. People-centered.
+</h2>
+
+<div class="why-grid">
+
+<div class="why-card">
+<h3>Focused Search</h3>
+<p>
+We approach each search individually rather than treating hiring
+as a volume exercise.
+</p>
+</div>
+
+<div class="why-card">
+<h3>Specialized Recruiting</h3>
+<p>
+Our focus spans professional disciplines where understanding the
+role and candidate profile matters.
+</p>
+</div>
+
+<div class="why-card">
+<h3>Responsive Communication</h3>
+<p>
+Clear and timely communication helps create a better experience
+for employers and professionals alike.
+</p>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ABOUT -->
 
 <section id="about">
 
-  <div class="container">
+<div class="container">
 
-    <div class="two-column">
+<div class="two-column">
 
-      <div>
+<div>
 
-        <div class="section-label">About MeritCove</div>
+<div class="section-label">About MeritCove</div>
 
-        <h2>Recruiting built around people.</h2>
+<h2>
+Recruiting built around people.
+</h2>
 
-      </div>
+</div>
 
-      <div>
+<div class="about-copy">
 
-        <p class="intro">
-          MeritCove Staffing is a professional recruitment firm focused on
-          connecting organizations with specialized talent across Healthcare,
-          Finance & Accounting, Construction, Engineering and Professional
-          Services.
-        </p>
+<p>
+MeritCove Staffing is a professional recruitment firm connecting
+U.S. organizations with specialized professionals across Healthcare,
+Finance & Accounting, Construction, Engineering and Professional
+Services.
+</p>
 
-        <br>
+<p>
+We believe successful recruiting starts with understanding both sides
+of the hiring process — organizations building stronger teams and
+professionals building meaningful careers.
+</p>
 
-        <p class="intro">
-          We believe successful recruiting begins with understanding the
-          people on both sides of the hiring process — the organizations
-          building their teams and the professionals building their careers.
-        </p>
+<p>
+Our focus is straightforward: understand the need, identify relevant
+talent and create professional connections that can lead to
+successful long-term hires.
+</p>
 
-      </div>
+</div>
 
-    </div>
+</div>
 
-  </div>
+</div>
+
 </section>
 
 
-<section id="contact" class="cta">
+<!-- CONTACT -->
 
-  <div class="container">
+<section id="contact" class="contact">
 
-    <div class="section-label">Let's Connect</div>
+<div class="container">
 
-    <h2>Looking for your next great hire?</h2>
+<div class="section-label">Let's Talk Talent</div>
 
-    <p>
-      Tell us about the talent your organization needs and start a
-      conversation with MeritCove Staffing.
-    </p>
+<h2>
+Ready to start your next search?
+</h2>
 
-    <a
-      href="mailto:saif@meritcovestaffing.com?subject=Hiring%20Inquiry%20-%20MeritCove%20Staffing"
-      class="btn btn-gold">
-      Contact MeritCove
-    </a>
+<p>
+Tell us about the position you're hiring for and start a conversation
+with MeritCove Staffing.
+</p>
 
-  </div>
+<a
+href="mailto:saif@meritcovestaffing.com?subject=Hiring%20Inquiry%20-%20MeritCove%20Staffing"
+class="btn btn-primary">
+Contact MeritCove
+</a>
+
+<a
+href="mailto:saif@meritcovestaffing.com"
+class="contact-email">
+saif@meritcovestaffing.com
+</a>
+
+</div>
+
 </section>
 
 </main>
 
 
+<!-- FOOTER -->
+
 <footer>
 
-  <div class="container">
+<div class="container">
 
-    <div class="footer-grid">
+<div class="footer-grid">
 
-      <div class="footer-brand">
+<div class="footer-brand">
 
-        <h3>MERITCOVE STAFFING</h3>
+<div class="footer-logo">
 
-        <p>
-          Professional & Specialized Talent Solutions
-        </p>
+<img src="Website%20Logo.png" alt="MeritCove Staffing">
 
-      </div>
+<strong>MERITCOVE STAFFING</strong>
 
-      <div class="footer-links">
+</div>
 
-        <div>
-          <h4>Industries</h4>
-          <a href="#industries">Healthcare</a>
-          <a href="#industries">Finance & Accounting</a>
-          <a href="#industries">Construction</a>
-          <a href="#industries">Engineering</a>
-        </div>
+<p>
+Professional permanent placement and specialized recruiting
+solutions connecting organizations with exceptional talent.
+</p>
 
-        <div>
-          <h4>Company</h4>
-          <a href="#about">About</a>
-          <a href="#employers">Employers</a>
-          <a href="#candidates">Job Seekers</a>
-          <a href="#contact">Contact</a>
-        </div>
+</div>
 
-      </div>
 
-    </div>
+<div class="footer-column">
 
-    <div class="copyright">
-      © 2026 MeritCove Staffing. All rights reserved.
-    </div>
+<h4>Explore</h4>
 
-  </div>
+<a href="#industries">Industries</a>
+<a href="#employers">Employers</a>
+<a href="#professionals">Job Seekers</a>
+<a href="#about">About</a>
+
+</div>
+
+
+<div class="footer-column">
+
+<h4>Connect</h4>
+
+<a href="#contact">Contact Us</a>
+
+<a href="mailto:saif@meritcovestaffing.com">
+Email MeritCove
+</a>
+
+</div>
+
+</div>
+
+
+<div class="footer-bottom">
+
+<span>
+© 2026 MeritCove Staffing. All rights reserved.
+</span>
+
+<span>
+Permanent Placement • Specialized Search
+</span>
+
+</div>
+
+</div>
 
 </footer>
 
